@@ -1,3 +1,4 @@
+/* star pulse animation */
 @-webkit-keyframes starPulse {
     from {opacity: 1; }
     to {opacity: 0.2; }
@@ -17,6 +18,86 @@
     from {opacity: 1; }
     to {opacity: 0.2; }
 }
+
+/* solar flare animation */
+@keyframes sunFire {
+    from { 
+        -webkit-box-shadow: 0 0 50px #f5c91a;
+        -moz-box-shadow: 0 0 50px #f5c91a;
+        box-shadow: 0 0 50px #f5c91a;
+
+     }
+    to { 
+        -webkit-box-shadow: 0 0 100px #f5c91a;
+        -moz-box-shadow: 0 0 100px #f5c91a;
+        box-shadow: 0 0 100px #f5c91a;
+
+     }
+}
+@-moz-keyframes sunFire {
+    from { 
+        -webkit-box-shadow: 0 0 50px #f5c91a;
+        -moz-box-shadow: 0 0 50px #f5c91a;
+        box-shadow: 0 0 50px #f5c91a;
+
+     }
+    to { 
+        -webkit-box-shadow: 0 0 100px #f5c91a;
+        -moz-box-shadow: 0 0 100px #f5c91a;
+        box-shadow: 0 0 100px #f5c91a;
+
+     }
+}
+@-o-keyframes sunFire {
+    from { 
+        -webkit-box-shadow: 0 0 50px #f5c91a;
+        -moz-box-shadow: 0 0 50px #f5c91a;
+        box-shadow: 0 0 50px #f5c91a;
+
+     }
+    to { 
+        -webkit-box-shadow: 0 0 100px #f5c91a;
+        -moz-box-shadow: 0 0 100px #f5c91a;
+        box-shadow: 0 0 100px #f5c91a;
+
+     }
+}
+@-webkit-keyframes sunFire {
+    from { 
+        -webkit-box-shadow: 0 0 50px #f5c91a;
+        -moz-box-shadow: 0 0 50px #f5c91a;
+        box-shadow: 0 0 50px #f5c91a;
+
+     }
+    to { 
+        -webkit-box-shadow: 0 0 100px #f5c91a;
+        -moz-box-shadow: 0 0 100px #f5c91a;
+        box-shadow: 0 0 100px #f5c91a;
+
+     }
+}
+
+/* rotate animation */
+@keyframes spin {
+    from  { transform: rotate(0); }
+    to    { transform: rotate(360deg); }    
+}
+
+@-webkit-keyframes spin {
+    from  { transform: rotate(0); }
+    to    { transform: rotate(360deg); }    
+} 
+
+@-moz-keyframes spin {
+    from  { transform: rotate(0); }
+    to    { transform: rotate(360deg); }    
+}
+
+@-o-keyframes spin {
+    from  { transform: rotate(0); }
+    to    { transform: rotate(360deg); }    
+}
+
 
 html, body {
     height: 100%;
@@ -40,8 +121,7 @@ html, body {
 
     -webkit-animation: starPulse 4s infinite alternate;
     -moz-animation: starPulse 4s infinite alternate;
-    -o-animation: star
-    Pulse 4s infinite alternate;
+    -o-animation: starPulse 4s infinite alternate;
     animation: starPulse 4s infinite alternate;
 }
 
@@ -68,10 +148,15 @@ html, body {
     -webkit-box-shadow: 0 0 50px #f5c91a;
     -moz-box-shadow: 0 0 50px #f5c91a;
     box-shadow: 0 0 50px #f5c91a;
+
+    -webkit-animation: sunFire 4s infinite alternate;
+    -moz-animation: sunFire 4s infinite alternate;
+    -o-animation: sunFire 4s infinite alternate;
+    animation: sunFire 4s infinite alternate;
 }
 
-#earthOrbit {
-    border: solid 1px red;
+ #earthOrbit {
+    /* border: solid 1px red; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -84,6 +169,11 @@ html, body {
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
+
+    -webkit-animation: spin 30s linear infinite;
+    -moz-animation: spin 30s linear infinite;
+    -o-animation: spin 30s linear infinite;
+    animation: spin 30s linear infinite;
 }
 
 #earth {
@@ -91,10 +181,15 @@ html, body {
     top: 50%;
     left: 0;
     margin-top: -40px;
+
+    -webkit-animation: spin 3s linear infinite;
+    -moz-animation: spin 3s linear infinite;
+    -o-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
 }
 
 #moonOrbit {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     width: 120px;
     height: 120px;
     position: absolute;
@@ -106,6 +201,11 @@ html, body {
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
+
+    -webkit-animation: spin 4s linear infinite reverse;
+    -moz-animation: spin 4s linear infinite reverse;
+    -o-animation: spin 4s linear infinite reverse;
+    animation: spin 4s linear infinite reverse;
 
 }
 
@@ -120,4 +220,4 @@ html, body {
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-}
+} 
